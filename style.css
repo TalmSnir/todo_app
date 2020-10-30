@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&display=swap");
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: red;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+#tasks {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#task1 {
+    display: grid;
+    grid-template-areas: "task  delete";
+    border: 1px solid;
+    border-radius: 1rem;
+    width: 90%;
+    display: flex;
+    border: 0.05rem solid;
+    box-shadow: 0.05rem 0.05rem;
+}
+
+button {
+    text-align: center;
+    border: none;
+}
+
+#add-task {
+    height: 3rem;
+    width: 3rem;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: auto 50%;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    box-shadow: 0.05rem 0.05rem;
+}
+
+#date-picker {
+    color: red;
+    font-size: 1.3rem;
+    margin: auto 50%;
+    border-radius: 10%;
+    background-color: white;
+    grid: task
+}
+
+#tag {
+    color: red;
+    font-size: 1.3rem;
+    margin: auto 50%;
+    border-radius: 10%;
+    background-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(173, 36, 36);
+}
+
+button:focus {
+    outline: none;
+}
