@@ -7,21 +7,57 @@ h1 {
     justify-content: center;
 }
 
-#tasks {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+}
+
+#tasks-list {
+    width: 90%;
+    margin: 5rem auto 5rem auto;
+    list-style-type: none;
+    outline: none;
+    padding-left: 0;
 }
 
 #task1 {
-    display: grid;
-    grid-template-areas: "task  delete";
-    border: 1px solid;
-    border-radius: 1rem;
-    width: 90%;
-    display: flex;
+    position: relative;
+    width: 100%;
+    height: 5rem;
     border: 0.05rem solid;
+    border-radius: 1rem;
     box-shadow: 0.05rem 0.05rem;
+    margin-bottom: 0.5rem;
+}
+
+#task-description {
+    position: relative;
+    top: 0;
+    left: 0.4rem;
+    margin-bottom: 3rem;
+}
+
+#actions {
+    margin-top: 0.5rem;
+    position: relative;
+    left: 0.4rem;
+}
+
+#date {
+    position: absolute;
+    bottom: 0.1rem;
+}
+
+#tag {
+    position: absolute;
+    bottom: 0.05rem;
+    left: 1rem;
+}
+
+#trash {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
 }
 
 button {
@@ -32,36 +68,65 @@ button {
 #add-task {
     height: 3rem;
     width: 3rem;
-    color: white;
     text-align: center;
     font-size: 2rem;
-    margin: auto 50%;
     border-radius: 50%;
     background-color: red;
     color: white;
     box-shadow: 0.05rem 0.05rem;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #date-picker {
     color: red;
     font-size: 1.3rem;
-    margin: auto 50%;
     border-radius: 10%;
     background-color: white;
-    grid: task
 }
 
 #tag {
     color: red;
     font-size: 1.3rem;
-    margin: auto 50%;
     border-radius: 10%;
     background-color: white;
 }
 
-button:hover {
+#add-task:hover {
     cursor: pointer;
     background-color: rgb(173, 36, 36);
+}
+
+#date-picker:hover,
+#tag:hover {
+    cursor: pointer;
+    color: rgb(173, 36, 36);
+}
+
+input {
+    opacity: 0;
+    cursor: pointer;
+}
+
+#delete {
+    border: 0.2rem solid red;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+#delete:hover {
+    background-color: rgba(173, 36, 36, 0.5);
+    cursor: pointer;
+}
+
+#delete:checked {
+    background-color: red;
 }
 
 button:focus {
